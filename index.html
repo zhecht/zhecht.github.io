@@ -78,11 +78,21 @@
 <li><strong>Quantum Parallelism:</strong> A register of n qubits will have 2<sup>n</sup> basis states of its own. Since a register can exist in a superposition of all these states at once, it is possible to apply a computation to all 2<sup>n</sup> register states rather than just one.</li>
 
 <li><strong>Modular Period:</strong> Say set = {2,4,8,16,32,64,..} ; set (mod 15) = {2,4,8,1,2,4,8,1,..} ; The period would be 4.</li>
+
+<li><strong>Shor's Period Finding Algorithm:</strong>
+  <br> 
+  <span style="text-align:center;">
+  1) Create superposition of states by applying Hadamard Gates to all qubits in the input register. <br>
+  2) Implement f as a quantum transform. Shor used repeated squaring. <br>
+  3) Perform Quantum Fourier Transform
+
+  </span>
+
 </ul>
 </p>
 
 <h3>
-  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span>Shor's Pseudocode</a></h3>
+  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Pseudocode</h3>
 
 <p>
 The algorithm consists of two steps.<br>
