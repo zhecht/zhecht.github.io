@@ -104,13 +104,36 @@ b) Finds period using quantum fourier transform
 
 Factoring a large odd integer N<br>
 <span class="indent">
-1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
+1) Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
 2) Use quantum computer to determine unknown period P with probability close to 1<br>
 3) If P is odd, return to step 1 ; Else, proceed. The Pr[P is odd] = (1/2)<sup>k</sup>, where k is the number of distinct prime factors of N.<br>
 4) Note: (m<sup>P/2</sup> - 1)(m<sup>P/2</sup> + 1) = m<sup>P</sup> - 1 <br>
 If m<sup>P/2</sup> + 1 &equiv; 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sup>P/2</sup> + 1 &equiv; 0 (mod N)] &lt; (1/2)<sup>k-1</sup> <br>
 5) Compute d = gcd(m<sup>P/2</sup> - 1, N) with Euclidean. Since m<sup>P/2</sup> + 1 &ne; 0 (mod N), it is shown that d is non-trivial factor of N.
 </span>
+</p>
+
+<h3>
+  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Time to Break RSA</h3>
+
+<p>
+Let's start easy with N = 21 (p = 3, q = 7)<br>
+
+1) Random m = 4. gcd(21,4) = 1. Proceed. <br>
+2) Find Period of function f..f(a) = 4<sup>a</sup> mod 21. P = 3 <br>
+3) P is odd, return to step 1 <br><br>
+
+1) m = 5. gcd(21,5) = 1. Proceed. <br>
+2) Find P = 6. <br>
+3) P is even. Proceed. <br>
+4) 5<sup>3</sup> + 1 &equiv; 0 (mod 21)? Yes, return to 1.<br><br>
+
+1) m = 8. (gcd(21,6) and gcd(21,7) are not 1). gcd(21,8) = 1. Proceed. <br>
+2) Q-Computer finds P = 2 with high probability <br>
+3) P is even. Proceed. <br>
+4) 8<sup>1</sup> + 1 &equiv; 0 (mod 21)? No. Proceed. <br>
+5) d = gcd(8<sup>1</sup> - 1, 21) = 7
+
 </p>
       </section>
     </div>
