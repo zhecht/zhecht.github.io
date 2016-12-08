@@ -71,11 +71,11 @@
 
 <p>
 <ul>
-<li><strong>Quantum Bit (Qubit):</strong> Like a bit, a qubit holds information. According to the no-cloning theorem and no-deleting theorem, a qubit's information cannot be copied nor destroyed. A qubit can exist not only in 0 and 1 states (like a bit), but also any combination of the two. <sub>**</sub>CAVEAT: Once the system is observed, the qubit's state collapses into one of its basis states (0,1)<sub>**</sub></li>
+<li><strong>Quantum Bit (Qubit):</strong> Like a bit, a qubit holds information. According to the no-cloning theorem and no-deleting theorem, a qubit's information cannot be copied nor destroyed. A qubit can exist not only in 0 and 1 states (like a bit), but also any combination of the two. <sup>**</sup>CAVEAT: Once the system is observed, the qubit's state collapses into one of its basis states (0,1)<sup>**</sup></li>
 
-<li><strong>Quantum Superposition:</strong> Two quantum states can be added together to create another valid quantum state. <sub>**</sub>Every quantum state can be represented as a sum of two or more other distinct states<sub>**</sub>.</li>
+<li><strong>Quantum Superposition:</strong> Two quantum states can be added together to create another valid quantum state. <sup>**</sup>Every quantum state can be represented as a sum of two or more other distinct states<sup>**</sup>.</li>
 
-<li><strong>Quantum Parallelism:</strong> A register of n qubits will have 2<sub>n</sub> basis states of its own. Since a register can exist in a superposition of all these states at once, it is possible to apply a computation to all 2<sub>n</sub> register states rather than just one.</li>
+<li><strong>Quantum Parallelism:</strong> A register of n qubits will have 2<sup>n</sup> basis states of its own. Since a register can exist in a superposition of all these states at once, it is possible to apply a computation to all 2<sup>n</sup> register states rather than just one.</li>
 
 <li><strong>Modular Period:</strong> Say set = {2,4,8,16,32,64,..} ; set (mod 15) = {2,4,8,1,2,4,8,1,..} ; The period would be 4.</li>
 </ul>
@@ -92,10 +92,10 @@ b) Finds period using quantum fourier transform  <br><br>
 Factoring a large odd integer N<br>
 1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
 2) Use quantum computer to determine unknown period P with probability close to 1<br>
-3) If P is odd, return to step 1 ; Else, proceed. The Pr[P is odd] = (1/2)<sub>k</sub>, where k is the number of distinct prime factors of N.<br>
-4) Note: (m<sub>P/2</sub> - 1)(m<sub>P/2</sub> + 1) = m<sub>P</sub> - 1 <br>
-If m<sub>P/2</sub> + 1 &equiv; 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sub>P/2</sub> + 1 &equiv; 0 (mod N)] &lt; (1/2)<sub>k-1</sub> <br>
-5) Compute d = gcd(m<sub>P/2</sub> - 1, N) with Euclidean. Since m<sub>P/2</sub> + 1 &ne; 0 (mod N), it is shown that d is non-trivial factor of N.
+3) If P is odd, return to step 1 ; Else, proceed. The Pr[P is odd] = (1/2)<sup>k</sup>, where k is the number of distinct prime factors of N.<br>
+4) Note: (m<sup>P/2</sup> - 1)(m<sup>P/2</sup> + 1) = m<sup>P</sup> - 1 <br>
+If m<sup>P/2</sup> + 1 &equiv; 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sup>P/2</sup> + 1 &equiv; 0 (mod N)] &lt; (1/2)<sup>k-1</sup> <br>
+5) Compute d = gcd(m<sup>P/2</sup> - 1, N) with Euclidean. Since m<sup>P/2</sup> + 1 &ne; 0 (mod N), it is shown that d is non-trivial factor of N.
 
 </p>
       </section>
