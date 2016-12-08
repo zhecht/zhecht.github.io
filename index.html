@@ -10,9 +10,7 @@
 
     <title>Zhecht.GitHub.io</title>
   </head>
-  <style>
-    sup {font-size:xx-small; vertical-align:super;}
-  </style>
+  
   <body>
 
     <!-- HEADER -->
@@ -92,12 +90,12 @@ a) Turns the factoring into the period finding problem <br>
 b) Finds period using quantum fourier transform  <br><br>
 
 Factoring a large odd integer N<br>
-1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &neq; 1, we have found a non-trivial factor and are finished. <br>
+1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
 2) Use quantum computer to determine unknown period P with probability close to 1<br>
 3) If P is odd, return to step 1 ; Else, proceed. The Pr[P is odd] = (1/2)<sub>k</sub>, where k is the number of distinct prime factors of N.<br>
 4) Note: (m<sub>P/2</sub> - 1)(m<sub>P/2</sub> + 1) = m<sub>P</sub> - 1 <br>
-If m<sub>P/2</sub> + 1 = 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sub>P/2</sub> + 1 = 0 (mod N)] &lt; (1/2)<sub>k-1</sub> <br>
-5) Compute d = gcd(m<sub>P/2</sub> - 1, N) with Euclidean. Since m<sub>P/2</sub> + 1 &neq; 0 (mod N), it is shown that d is non-trivial factor of N.
+If m<sub>P/2</sub> + 1 &equiv; 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sub>P/2</sub> + 1 &equiv; 0 (mod N)] &lt; (1/2)<sub>k-1</sub> <br>
+5) Compute d = gcd(m<sub>P/2</sub> - 1, N) with Euclidean. Since m<sub>P/2</sub> + 1 &ne; 0 (mod N), it is shown that d is non-trivial factor of N.
 
 </p>
       </section>
@@ -111,6 +109,8 @@ If m<sub>P/2</sub> + 1 = 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sub>P
     </div>
 
     
-
+  <style>
+    sup {font-size:xx-small; vertical-align:super;}
+  </style>
   </body>
 </html>
