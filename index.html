@@ -81,7 +81,7 @@
 
 <li><strong>Shor's Period Finding Algorithm:</strong>
   <br> 
-  <span style="text-align:center;">
+  <span class="indent">
   1) Create superposition of states by applying Hadamard Gates to all qubits in the input register. <br>
   2) Implement f as a quantum transform. Shor used repeated squaring. <br>
   3) Perform Quantum Fourier Transform
@@ -96,8 +96,11 @@
 
 <p>
 The algorithm consists of two steps.<br>
+<span class="input">
 a) Turns the factoring into the period finding problem <br>
-b) Finds period using quantum fourier transform  <br><br>
+b) Finds period using quantum fourier transform 
+</span>
+<br><br>
 
 Factoring a large odd integer N<br>
 1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
@@ -121,6 +124,7 @@ If m<sup>P/2</sup> + 1 &equiv; 0 (mod N), return to step 1 ; Else, Proceed. Pr[m
     
   <style>
     sup {font-size:xx-small; vertical-align:super;}
+    .indent {float:left;text-align:left;padding:0 5%;}
   </style>
   </body>
 </html>
