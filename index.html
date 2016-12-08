@@ -96,20 +96,21 @@
 
 <p>
 The algorithm consists of two steps.<br>
-<span class="input">
+<span class="indent">
 a) Turns the factoring into the period finding problem <br>
 b) Finds period using quantum fourier transform 
 </span>
 <br><br>
 
 Factoring a large odd integer N<br>
+<span class="indent">
 1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
 2) Use quantum computer to determine unknown period P with probability close to 1<br>
 3) If P is odd, return to step 1 ; Else, proceed. The Pr[P is odd] = (1/2)<sup>k</sup>, where k is the number of distinct prime factors of N.<br>
 4) Note: (m<sup>P/2</sup> - 1)(m<sup>P/2</sup> + 1) = m<sup>P</sup> - 1 <br>
 If m<sup>P/2</sup> + 1 &equiv; 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sup>P/2</sup> + 1 &equiv; 0 (mod N)] &lt; (1/2)<sup>k-1</sup> <br>
 5) Compute d = gcd(m<sup>P/2</sup> - 1, N) with Euclidean. Since m<sup>P/2</sup> + 1 &ne; 0 (mod N), it is shown that d is non-trivial factor of N.
-
+</span>
 </p>
       </section>
     </div>
