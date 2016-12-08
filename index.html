@@ -66,7 +66,7 @@
 
 <p>The Shor algorithm factors large integers in polynomial time, thus making RSA insecure. The fastest known scheme to break RSA at the time was called the number-field sieve. The number-field sieve, presented in 1988, still has a runtime similar to algorithms presented today. It can factor any RSA % n using 2<sup>(1.9...+o(1))(lg n)^(1/3) (lg lg n)^(2/3)</sup> operations. 6 years later and Shor presented that a quantum computer of size (lg n)<sup>1+o(1)</sup> can factor RSA % n in only (lg n)<sup>2+o(1)</sup> operations.</p>
 
-<p>Before we get into an example of how Shor's works, we need to clear up some layman quantum terms for the beginners (like me).<a href="#rsa-example">Skip Descriptions and Go To RSA example</a></p>
+<p>Before we get into an example of how Shor's works, we need to clear up some layman quantum terms for the beginners (like me).</p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Definitions</h3>
@@ -78,7 +78,26 @@
 <li><strong>Quantum Superposition:</strong> Two quantum states can be added together to create another valid quantum state. <sub>**</sub>Every quantum state can be represented as a sum of two or more other distinct states<sub>**</sub>.</li>
 
 <li><strong>Quantum Parallelism:</strong> A register of n qubits will have 2<sub>n</sub> basis states of its own. Since a register can exist in a superposition of all these states at once, it is possible to apply a computation to all 2<sub>n</sub> register states rather than just one.</li>
+
+<li><strong>Modular Period:</strong> Say set = {2,4,8,16,32,64,..} ; set (mod 15) = {2,4,8,1,2,4,8,1,..} ; The period would be 4.</li>
 </ul>
+</p>
+
+<h3>
+  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span>Shor's Pseudocode</a></h3>
+
+<p>
+The algorithm consists of two steps.<br>
+a) Turns the factoring into the period finding problem <br>
+b) Finds period using quantum fourier transform  <br><br>
+
+Factoring a large odd integer N<br>
+1)Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &neq; 1, we have found a non-trivial factor and are finished. <br>
+2) Use quantum computer to determine unknown period P with probability close to 1<br>
+3) If P is odd, return to step 1 ; Else, proceed. The Pr[P is odd] = (1/2)<sub>k</sub>, where k is the number of distinct prime factors of N.<br>
+4) Note: (m<sub>P/2</sub> - 1)(m<sub>P/2</sub> + 1) = m<sub>P</sub> - 1 <br>
+If m<sub>P/2</sub> + 1 = 0 (mod N), return to step 1 ; Else, Proceed. Pr[m<sub>P/2</sub> + 1 = 0 (mod N)] &lt; (1/2)<sub>k-1</sub> <br>
+5) Compute d = gcd(m<sub>P/2</sub> - 1, N) with Euclidean. Since m<sub>P/2</sub> + 1 &neq; 0 (mod N), it is shown that d is non-trivial factor of N.
 
 </p>
       </section>
