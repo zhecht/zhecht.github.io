@@ -39,11 +39,11 @@
 
 <p style="text-align:center;">If <code>x + y > z</code>, worry.</p>
 
-<p>NIST and other experts expect that a quantum computer will be built within <strong>15 years</strong>. Many security companies and intelligent angencies are well on their way to implementing post-quantum standards. These are schemes that, in theory, are unbreakable even with the use of a quantum computer.</p>
+<p>NIST and other experts expect that a quantum computer will be built within <strong>15 years</strong>. Some scientists even believe we are already at the point where <code>y > z</code>. If this is the case, then we are already too late. Many security companies and intelligent angencies are well on their way to implementing post-quantum standards. These are schemes that, in theory, are unbreakable even with the access of a quantum computer.</p>
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Time For A Change</h3>
 
-<p>All public key crypto (RSA, DSA, Diffie-Hellman exchange) will be vulnerable to attacks. Symmetric key cryptography (AES) and Hash functions (SHA-1,2,3) would need a modification that can affect runtime and memory. Symmetric key crypto would need larger keys and hash functions would need longer outputs. Public key cryptography together with quantum-resitant algorithms can fix our problem. </p>
+<p>All public key crypto (RSA, DSA, Diffie-Hellman exchange) will be vulnerable to attacks. Symmetric key cryptography (AES) and Hash functions (SHA-1,2,3) would need a modification that can affect runtime and memory. Symmetric key crypto would need larger keys and hash functions would need longer outputs. Public key cryptography together with quantum-resitant algorithms can also fix this problem. </p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quantum-Resistant Algorithms</h3>
@@ -56,13 +56,13 @@
     <li>Code-Based (McEliece)</li>
     <li>Hash-Based (Merkle's Tree)</li>
   </ul>
-  In theory, these algorithms are thought to be safe from an adversary equipped with a quantum computer. The reason public key cryptography works in practice is due to three properties. 1) Integer Factorization Problem, 2) Discrete Log Problem, 3) Elliptic-Curve Discrete Log Problem. Scientists have shown that with the help of a quantum computer, all these problems can be easily solved in feasible time. Peter Shor introduced the Shor algorithm in 1994, shocking the world of computer science.
+  In theory, these algorithms are thought to be safe from an adversary equipped with a quantum computer. The reason public key cryptography works in practice is due to three properties. 1) The Integer Factorization Problem, 2) The Discrete Log Problem, and 3) The Elliptic-Curve Discrete Log Problem. Scientists have shown that with the assistance of a quantum computer, all these problems can be managed in feasible time. Peter Shor introduced the Shor algorithm in 1994, shocking the world of quantum computing.
 </p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Algorithm</h3>
 
-<p>The Shor algorithm factors large integers in polynomial time, thus making RSA insecure. The fastest known scheme to break RSA at the time was called the number-field sieve. The number-field sieve, presented in 1988, still has a runtime similar to algorithms presented today. It can factor any RSA % n using 2<sup>(1.9...+o(1))(lg n)^(1/3) (lg lg n)^(2/3)</sup> operations. 6 years later and Shor presented that a quantum computer of size (lg n)<sup>1+o(1)</sup> can factor RSA % n in only (lg n)<sup>2+o(1)</sup> operations.</p>
+<p>The Shor algorithm factors large integers in polynomial time, thus making RSA insecure. The fastest known scheme to break RSA at the time us called the number-field sieve. The number-field sieve, presented in 1988, still has a runtime similar to factorization algorithms presented today. It can factor any RSA % N using 2<sup>(1.9...+o(1))(lg N)^(1/3) (lg lg N)^<sup>(2/3)</sup></sup> operations. 6 years later and Shor presented that a quantum computer of size (lg N)<sup>1+o(1)</sup> can factor RSA % N in only (lg N)<sup>2+o(1)</sup> operations.</p>
 
 <p>Before we get into an example of how Shor's works, we need to clear up some layman quantum terms for the beginners (like me).</p>
 
