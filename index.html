@@ -43,7 +43,7 @@
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Time For A Change</h3>
 
-<p>All public key crypto (RSA, DSA, Diffie-Hellman exchange) will be vulnerable to attacks. Symmetric key cryptography (AES) and Hash functions (SHA-1,2,3) would need a modification that can affect runtime and memory. Symmetric key crypto would need larger keys and hash functions would need longer outputs. Public key cryptography together with quantum-resitant algorithms can also fix this problem. </p>
+<p>All public key crypto (RSA, DSA, Diffie-Hellman exchange) will be vulnerable to attacks. Symmetric key cryptography (AES) and Hash functions (SHA-1,2,3) would need a modification that can affect runtime and memory. Symmetric key crypto would need larger keys and hash functions would need longer outputs <span class="cit">[1]</span>. Public key cryptography together with quantum-resitant algorithms can also fix this problem. </p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quantum-Resistant Algorithms</h3>
@@ -56,13 +56,13 @@
     <li>Code-Based (McEliece)</li>
     <li>Hash-Based (Merkle's Tree)</li>
   </ul>
-  In theory, these algorithms are thought to be safe from an adversary equipped with a quantum computer. The reason public key cryptography works in practice is due to three properties. 1) The Integer Factorization Problem, 2) The Discrete Log Problem, and 3) The Elliptic-Curve Discrete Log Problem. Scientists have shown that with the assistance of a quantum computer, all these problems can be managed in feasible time. Peter Shor introduced the Shor algorithm in 1994, shocking the world of quantum computing.
+  In theory, these algorithms are thought to be safe from an adversary equipped with a quantum computer. The reason public key cryptography works in practice is due to three properties. 1) The Integer Factorization Problem, 2) The Discrete Log Problem, and 3) The Elliptic-Curve Discrete Log Problem <span class="cit">[3]</span>. Scientists have shown that with the assistance of a quantum computer, all these problems can be managed in feasible time. Peter Shor introduced the Shor algorithm in 1994, shocking the world of quantum computing.
 </p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Algorithm</h3>
 
-<p>The Shor algorithm can factor large integers in polynomial time, thus making RSA insecure. The fastest known scheme to break RSA at the time is called the number-field sieve. The number-field sieve, presented in 1988, still has a runtime similar to factorization algorithms presented today. It can factor any RSA % N using 2<sup>(1.9...+o(1))(lg N)<sup>(1/3)</sup> (lg lg N)<sup>(2/3)</sup></sup> operations. 6 years later and Shor presented that a quantum computer of size (lg N)<sup>1+o(1)</sup> can factor RSA % N in only (lg N)<sup>2+o(1)</sup> operations.</p>
+<p>The Shor algorithm can factor large integers in polynomial time, thus making RSA insecure. The fastest known scheme to break RSA at the time is called the number-field sieve. The number-field sieve, presented in 1988, still has a runtime similar to factorization algorithms presented today. It can factor any RSA % N using 2<sup>(1.9...+o(1))(lg N)<sup>(1/3)</sup> (lg lg N)<sup>(2/3)</sup></sup> operations <span class="cit">[3]</span>. 6 years later and Shor presented that a quantum computer of size (lg N)<sup>1+o(1)</sup> can factor RSA % N in only (lg N)<sup>2+o(1)</sup> operations <span class="cit">[4]</span>.</p>
 
 <p>Before we get into an example of how Shor's works, we need to clear up some layman quantum terms for the beginners (like me).</p>
 
@@ -225,9 +225,13 @@ All of these steps can be coded classically, except for 2. This means that in th
       <footer class="inner">
         <h3>References</h3>
         <p>
-          <span class="ref">[1]</span> Moody, Dustin (2016). <a href="http://csrc.nist.gov/groups/ST/post-quantum-crypto/documents/pqcrypto-2016-presentation.pdf" target="_blank">"Post-Quantum Cryptography: NIST's Plan For The Future"</a> (pdf). pp. 2-5. Retrieved 13 December 2016.
+          <span class="ref">[1]</span> Moody, Dustin (2016). <a href="http://csrc.nist.gov/groups/ST/post-quantum-crypto/documents/pqcrypto-2016-presentation.pdf" target="_blank">"Post-Quantum Cryptography: NIST's Plan For The Future"</a> (pdf). pp. 2-5. Retrieved 12 December 2016.
           <br>
-          <span class="ref">[2]</span> Freĭvald, R. V, G Engels, and Barbara Catania. SOFSEM 2016. 1st ed. 2016. Print.
+          <span class="ref">[2]</span> Brassard, Gilles (2005). <a href="https://arxiv.org/pdf/quant-ph/0604072.pdf">Brief History of Quantum Cyrptography: A Personal Perspective</a>
+          <br>
+          <span class="ref">[3]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Post-quantum_cryptography">"Post-Quantum Cryptography"</a> (wiki). Retrieved 12 December 2016.
+          <br>
+          <span class="ref">[4]</span> Bernstein, Daniel J. (n.d). <a href="http://www.springer.com/cda/content/document/cda_downloaddocument/9783540887010-c1.pdf?SGWID=0-0-45-645102-p173864247">"Introduction to post-quantum cryptography</a> (pdf). Retrieved 12 December 2016.
         </p>
       </footer>
     </div>
