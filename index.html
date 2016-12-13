@@ -94,14 +94,14 @@
   <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Pseudocode</h3>
 
 <p>
-The algorithm consists of two steps. <span class="cit">[9]</span><br>
+The algorithm consists of two steps. <span class="cit">[8]</span><br>
 <span class="indent">
 a) Turns the factoring into the period finding problem <br>
 b) Finds period using quantum fourier transform 
 </span>
 <br><br><br>
 
-Factoring a large odd integer N <span class="cit">[9]</span>
+Factoring a large odd integer N <span class="cit">[8]</span>
 <br>
 <span class="indent">
 1) Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
@@ -137,11 +137,11 @@ Let's start easy with N = 21 (p = 3, q = 7)<br>
 </p>
 
 <p>
-All of these steps can be coded classically, except for 2. This means that in theory, most of the implementation of Shor's can be written today. Our problem comes with finding the period of the function in a feasible amount of time. Shor himself has stated that we won't know the full implications of a quantum computer until one is actually built. Coming full circle, we see why The Mosca Theorem has huge consequences. We need to be able to write quantum-resistant algorithms <i>and</i> implement them into existing infrastructures by the time quantum computers are built.
+All of these steps can be coded classically, except for 2. This means that in theory, most of the implementation of Shor's can be written today. Our problem comes with finding the period of the function in a feasible amount of time. Shor himself has stated that we won't know the full implications of a quantum computer until one is actually built <span class="cit">[10]</span>. Coming full circle, we see why The Mosca Theorem has huge consequences. We need to be able to write quantum-resistant algorithms <i>and</i> implement them into existing infrastructures by the time quantum computers are built.
 </p>
 
 <h3>
-  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Quantum Timeline</h3>
+  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Quantum Timeline <span class="cit">[11]</span></h3>
   <ul>
     <li><strong>1960:</strong> Stephen Wiesner creates the idea of <u>conjugate coding</u>. Rejected by the science community at the time, Wiesner was years ahead of his time</li>
     <li class="indent_li"><u>conjugate coding</u>: An idea of a "quantum multiplexing" channel was introduced. This allowed for one party to send two messages to another party. The receiver decides which message to read, inevitably destroying the other message</li>
@@ -176,22 +176,22 @@ All of these steps can be coded classically, except for 2. This means that in th
   <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Future</h3>
 <p>The idea of Quantum Computing is quite a new topic in the ever-changing computing world. Every year, numerous breakthroughs are discovered, inching closer and closer to quantum standardization. It is a race against time and by the looks of it, we are losing. The closest organizations and companies to the computing world are starting to worry too.</p>
 <p>
-  (US) <strong>NSA:</strong> Issued a release in 2015 advising all companies not to switch over to elliptic curve algorithms (more secure than public key). They announced they were going to initiate a transition to quantum-resistant algorithms in the near future
+  (US) <strong>NSA:</strong> Issued a release in 2015 advising all companies not to switch over to elliptic curve algorithms (more secure than public key). They announced they were going to initiate a transition to quantum-resistant algorithms in the near future <span class="cit">[1]</span>
 </p>
 <p>
-  (EU) <strong>PQCRYPTO:</strong> Offers insight into our cryptography future and offers technical packages including: 1) PQ-crypto for small devices (embedded devices), 2) PQ-crypto for the Internet (making signatures safe), and 3) PQ-crypto for the cloud (all user data)
-</p>
-
-<p>
-  (EU) <strong>ETSI:</strong> A Independent, non-profit organization helping anyone implement secure practices
+  (EU) <strong>PQCRYPTO:</strong> Offers insight into our cryptography future and offers technical packages including: 1) PQ-crypto for small devices (embedded devices), 2) PQ-crypto for the Internet (making signatures safe), and 3) PQ-crypto for the cloud (all user data) <span class="cit">[12]</span>
 </p>
 
 <p>
-  (US) <strong id="https://tools.ietf.org/html/draft-mcgrew-hash-sigs-00">NIST:</strong> Made a report on Post-Quantum Cryptography and many other resources available to the public, free of charge 
+  (EU) <strong>ETSI:</strong> A Independent, non-profit organization helping anyone implement secure practices <span class="cit">[13]</span>
 </p>
 
 <p>
-  (US) <strong>IETF:</strong> A general signature system using Merkle trees. Most asymmetric authentication will be insecure when a quantum computer becomes widely available. IETF does not rely on large integer arithmatic, so it will not be affected
+  (US) <strong id="https://tools.ietf.org/html/draft-mcgrew-hash-sigs-00">NIST:</strong> Made a report on Post-Quantum Cryptography and many other resources available to the public, free of charge <span class="cit">[1]</span>
+</p>
+
+<p>
+  (US) <strong>IETF:</strong> A general signature system using Merkle trees. Most asymmetric authentication will be insecure when a quantum computer becomes widely available. IETF does not rely on large integer arithmatic, so it will not be affected <span class="cit">[14]</span>
 </p>
 
 <h3>
@@ -243,6 +243,16 @@ All of these steps can be coded classically, except for 2. This means that in th
           <span class="ref">[8]</span> Blanda, Stephanie (2014). <a href="http://blogs.ams.org/mathgradblog/2014/04/30/shors-algorithm-breaking-rsa-encryption/">Shor's Algorithm - Breaking RSA Encryption</a> (web). Retrieved 12 December 2016
           <br>
           <span class="ref">[9]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">"Shor's Algorithm"</a> (wiki). Retrieved 12 December 2016.
+          <br>
+          <span class="ref">[10]</span> Shor, Peter (2013). <a href="https://cs.stackexchange.com/questions/16684/shors-algorithm-speed">"Shor's Algorithm Speed"</a> (web). Retrieved 12 December 2016.
+          <br>
+          <span class="ref">[11]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Timeline_of_quantum_computing">"Timeline of Quantum Computing"</a> (wiki). Retrieved 12 December 2016.
+          <br>
+          <span class="ref">[12]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">"Shor's Algorithm"</a> (wiki). Retrieved 12 December 2016.
+          <br>
+          <span class="ref">[10]</span> Shor, Peter (2013). <a href="https://cs.stackexchange.com/questions/16684/shors-algorithm-speed">"Shor's Algorithm Speed"</a> (web). Retrieved 12 December 2016.
+          <br>
+          <span class="ref">[11]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Timeline_of_quantum_computing">"Timeline of Quantum Computing"</a> (wiki). Retrieved 12 December 2016.
           <br>
         </p>
       </footer>
