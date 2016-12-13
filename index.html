@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Zhecht.GitHub.io</title>
+    <title>EECS475 Final</title>
+    <script src="jquery-3.1.1.min.js"></script>
   </head>
   
   <body>
@@ -208,10 +209,10 @@ All of these steps can be coded classically, except for 2. This means that in th
   For one, quantum computing is a highly debated topic in the community. Take the company D-Wave for example. They were the first company to launch the universal quantum computer. D-Wave has partnered with NASA, Google, and countless others in order to push quantum technology into the marketplace. Their computers use quantum annealing, which is basically a way to measure quantum fluctuations for experiments and tests. They based the prototypes off of the papers written by renowned scientist Umesh Vazirani.
 </p>
 <p>
-  In 2007, D-Wave claimed to have an operational 28-qubit quantum annealing computer, and next year claimed to have built a 128-qubit computer. Both of these claims have yet to be verified though. Then in 2015, D-Wave said they have created the first 1000+-qubit computer.
+  In 2007, D-Wave claimed to have an operational 28-qubit quantum annealing computer, and next year claimed to have built a 128-qubit computer. Both of these claims have yet to be verified though. Then in 2015, D-Wave said they have created the first 1000+-qubit computer. <span class="cit">[11]</span>
 </p>
 <p>
-  Now here is where things get interesting. Umesh Vazirani, the scientist whose papers are the basis for the D-Wave prototypes, actually rejects the notion that D-Wave built a <i>quantum</i> computer. His beliefs stem from the fact that quantum entanglement is completely absent from D-Wave technology. He's not alone in his opinion either. 
+  Now here is where things get interesting. Umesh Vazirani, the scientist whose papers are the basis for the D-Wave prototypes, actually rejects the notion that D-Wave built a <i>quantum</i> computer. His beliefs stem from the fact that quantum entanglement is completely absent from D-Wave technology <span class="cit">[15]</span>. He's not alone in his opinion either. 
 </p>
 
 <p>
@@ -248,12 +249,13 @@ All of these steps can be coded classically, except for 2. This means that in th
           <br>
           <span class="ref">[11]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Timeline_of_quantum_computing">"Timeline of Quantum Computing"</a> (wiki). Retrieved 12 December 2016.
           <br>
-          <span class="ref">[12]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">"Shor's Algorithm"</a> (wiki). Retrieved 12 December 2016.
+          <span class="ref">[12]</span> (n.d). <a href="https://pqcrypto.eu.org/index.html">"PQCRYPTO"</a> (web). Retrieved 12 December 2016.
           <br>
-          <span class="ref">[10]</span> Shor, Peter (2013). <a href="https://cs.stackexchange.com/questions/16684/shors-algorithm-speed">"Shor's Algorithm Speed"</a> (web). Retrieved 12 December 2016.
+          <span class="ref">[13]</span> (n.d). <a href="http://www.etsi.org/technologies-clusters/technologies/quantum-safe-cryptography">"ETSI"</a> (web). Retrieved 12 December 2016.
           <br>
-          <span class="ref">[11]</span> (n.d). <a href="https://en.wikipedia.org/wiki/Timeline_of_quantum_computing">"Timeline of Quantum Computing"</a> (wiki). Retrieved 12 December 2016.
+          <span class="ref">[14]</span> (n.d). <a href="https://www.ietf.org/">"IETF"</a> (wiki). Retrieved 12 December 2016.
           <br>
+          <span class="ref">[15]</span> (n.d). <a href="https://en.wikipedia.org/wiki/D-Wave_Systems">"D-Wave Systems"</a> (wiki). Retrieved 12 December 2016.
         </p>
       </footer>
     </div>
@@ -265,5 +267,10 @@ All of these steps can be coded classically, except for 2. This means that in th
     .ref,.cit { color:red;}
     .cit{font-size:xx-small; vertical-align:super;}
   </style>
+  <script>
+    $('.cit').on('hover click', function(){
+      
+    });
+  </script>
   </body>
 </html>
