@@ -198,7 +198,7 @@ All of these steps can be coded classically, except for 2. This means that in th
   <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Project Hurdles</h3>
 
 <p>
-  At the start of this project, I wanted to learn about something completely new to me and the computing world. I invested a lot of time learning new math and reduction concepts because I came into this project with no quantum physics or computing knowledge. I wanted to understand why quantum technology is such a popular topic in the world of cryptography. Turns out, it will be one of the most important challanges we face as computer scientists. 
+  At the start of this project, I wanted to learn about something completely new to me and the computing world. I invested a lot of time learning new math and reduction concepts because I came into this project with zero quantum computing knowledge. I wanted to understand why quantum technology is such a popular topic in the world of cryptography. Turns out, it will be one of the most important challanges we face as computer scientists. 
 </p>
 
 <h3>
@@ -211,7 +211,7 @@ All of these steps can be coded classically, except for 2. This means that in th
   In 2007, D-Wave claimed to have an operational 28-qubit quantum annealing computer, and next year claimed to have built a 128-qubit computer. Both of these claims have yet to be verified though. Then in 2015, D-Wave said they have created the first 1000+-qubit computer. <span class="cit">[11]</span>
 </p>
 <p>
-  Now here is where things get interesting. Umesh Vazirani, the scientist whose papers are the basis for the D-Wave prototypes, actually rejects the notion that D-Wave built a <i>quantum</i> computer. His beliefs stem from the fact that quantum entanglement is completely absent from D-Wave technology <span class="cit">[15]</span>. He's not alone in his opinion either. 
+  Now here is where things get interesting. Umesh Vazirani, the scientist whose papers are the basis for the D-Wave prototypes, actually rejects the notion that D-Wave built a <i>quantum</i> computer. His beliefs, along with many others stem from the fact that quantum entanglement is completely absent from D-Wave technology <span class="cit">[15]</span>. It has been researched that entaglement is one of the necessary conditions for a computer to be considered quantum. 
 </p>
 
 <p>
@@ -258,6 +258,9 @@ All of these steps can be coded classically, except for 2. This means that in th
         </p>
       </footer>
     </div>
+    <div id='hover_cit'>
+
+    </div>
 
     
   <style>
@@ -266,10 +269,18 @@ All of these steps can be coded classically, except for 2. This means that in th
     .indent {float:left;text-align:left;padding:0 5%;}
     .ref,.cit { color:red;}
     .cit{font-size:xx-small; vertical-align:super; cursor: pointer;}
+    #hover_cit {position: absolute;width:150px;height:200px;}
   </style>
   <script>
     $('.cit').on('hover click', function(){
-      console.log($(this).text());
+      var num = $(this).text().substr(1,1);
+      var offset_top = $(this).offset().top;
+      var offset_left = $(this).offset().left;
+      $('#hover_cit').css({
+        'top':offset_top,
+        'left':offset_left
+      });
+
     });
   </script>
   </body>
