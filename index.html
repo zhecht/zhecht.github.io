@@ -63,7 +63,7 @@
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Algorithm</h3>
 
-<p>The Shor algorithm can factor large integers in polynomial time, thus making RSA insecure. At the time, the number-field sieve was the fastest known scheme to break RSA. The number-field sieve, presented in 1988, still has a runtime similar to factorization algorithms presented today. It can factor any RSA % N using 2<sup>(1.9...+o(1))(lg N)<sup>(1/3)</sup> (lg lg N)<sup>(2/3)</sup></sup> operations <span class="cit">[4]</span>. 6 years later and Shor presented that a quantum computer of size (lg N)<sup>1+o(1)</sup> can factor RSA % N in only (lg N)<sup>2+o(1)</sup> operations <span class="cit">[4]</span>.</p>
+<p>The Shor algorithm can factor large integers in polynomial time, thus making RSA insecure. At the time, the number-field sieve was the fastest known scheme to break RSA. The number-field sieve, presented in 1988, still has a runtime similar to factorization algorithms presented today. It can factor any RSA % N using 2<sup>(1.9...+o(1))(lg N)<sup>(1/3)</sup> (lg lg N)<sup>(2/3)</sup></sup> operations <span class="cit">[4]</span>. 6 years later and Shor presented that a quantum computer of size (lg N)<sup>1+o(1)</sup> that can factor RSA % N in only (lg N)<sup>2+o(1)</sup> operations <span class="cit">[4]</span>.</p>
 
 <p>Before we get into an example of how Shor's works, we need to clear up some layman quantum terms for the beginners (like me).</p>
 
@@ -72,7 +72,7 @@
 
 <p>
 <ul>
-<li><strong>Quantum Bit (Qubit):</strong><span class="cit">[5]</span> Like a bit, a qubit holds information. According to the no-cloning theorem and no-deleting theorem, a qubit's information cannot be copied nor destroyed. A qubit can exist not only in 0 and 1 states (like a bit), but also any combination of the two. <sup>**</sup>CAVEAT: Once the system is observed, the qubit's state collapses into one of its basis states (0,1)<sup>**</sup> </li>
+<li><strong>Quantum Bit (Qubit):</strong><span class="cit">[5]</span> Similar to a bit, a qubit holds information. According to the no-cloning theorem and no-deleting theorem, a qubit's information cannot be copied nor destroyed. A qubit can exist not only in 0 and 1 states (like a bit), but also any combination of the two. <sup>**</sup>CAVEAT: Once the system is observed, the qubit's state collapses into one of its basis states (0 or 1)<sup>**</sup> </li>
 
 <li><strong>Quantum Superposition:</strong><span class="cit">[6]</span> Two quantum states can be added together to create another valid quantum state. <sup>**</sup>Every quantum state can be represented as a sum of two or more other distinct states<sup>**</sup></li>
 
@@ -87,22 +87,21 @@
   2) Implement f as a quantum transform. Shor used repeated squaring<br>
   3) Perform Quantum Fourier Transform
   </span>
-
 </ul>
 </p>
 
 <h3>
-  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Pseudocode</h3>
+  <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shor's Pseudocode</h3><span class="cit">[8]</span>
 
 <p>
-The algorithm consists of two steps. <span class="cit">[8]</span><br>
+The algorithm consists of two steps. <br>
 <span class="indent">
-a) Turns the factoring into the period finding problem <br>
-b) Finds period using quantum fourier transform 
+a) Turning the factoring problem into the period finding problem <br>
+b) Finding the period using quantum fourier transform 
 </span>
 <br><br><br>
 
-Factoring a large odd integer N <span class="cit">[8]</span>
+Factoring a large odd integer N
 <br>
 <span class="indent">
 1) Choose random m &lt; N. Compute gcd(m,N) using Euclideans which runs in poly-time. If gcd(m,N) &ne; 1, we have found a non-trivial factor and are finished. <br>
