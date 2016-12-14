@@ -269,19 +269,22 @@ All of these steps can be coded classically, except for 2. This means that in th
     .indent {float:left;text-align:left;padding:0 5%;}
     .ref,.cit { color:red;}
     .cit{font-size:xx-small; vertical-align:super; cursor: pointer;}
-    #hover_cit {position: absolute;width:250px;height:100px;background: rgba(0,0,0,.8);color:white;}
+    #hover_cit {position: absolute;width:300px;padding:5px;background:rgba(0,0,0,.8);color:white;font-size:14px;text-align:center;}
     footer div {color:white;}
-    footer a {color:blue;}
+    footer a {color:#007edf;}
   </style>
   <script>
     $('.cit').on('hover click', function(){
-      var num = $(this).text().substr(1,1);
+      var num = $(this).text().substr(1,2);
+      if (num[1] === ']') { //one-digit
+        num = num[0];
+      }
       var offset_top = $(this).offset().top;
       var offset_left = $(this).offset().left;
       var txt_in = $('#ref_'+num).text();
       $('#hover_cit').css({
         'top':offset_top + 15,
-        'left':offset_left - 125
+        'left':offset_left - 150
       }).text(txt_in).show();
     });
   </script>
