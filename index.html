@@ -269,7 +269,7 @@ All of these steps can be coded classically, except for 2. This means that in th
     .indent {float:left;text-align:left;padding:0 5%;}
     .ref,.cit { color:red;}
     .cit{font-size:xx-small; vertical-align:super; cursor: pointer;}
-    #hover_cit {position: absolute;width:150px;height:200px;}
+    #hover_cit {position: absolute;width:250px;height:100px;background: rgba(0,0,0,.7);}
   </style>
   <script>
     $('.cit').on('hover click', function(){
@@ -278,7 +278,7 @@ All of these steps can be coded classically, except for 2. This means that in th
       var offset_left = $(this).offset().left;
       $('#hover_cit').css({
         'top':offset_top,
-        'left':offset_left
+        'left':offset_left - 50
       });
 
     });
